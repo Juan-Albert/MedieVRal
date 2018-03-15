@@ -2,10 +2,10 @@
 
 ### Autor: Juan Alberto Martínez López
 
-### 1. Hardware necesario
+### * Hardware necesario
 
-### 1. Software Necesario
+### * Software Necesario
 
-### 1. Instalación y configuración
+### * Instalación y configuración
 
 
