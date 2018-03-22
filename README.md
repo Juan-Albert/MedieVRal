@@ -19,4 +19,15 @@ Para el uso de este proyecto es necesario el siguiente software:
 
 ### 3. Instalación y configuración
 
+### 4. Assets Utilizados
+
+Para la creación de este proyecto se han utilizado los siguientes Assets:
+
+* Medieval Town (Base): Paquete de modelos medievales.  Licence owner Kenney.
+
+### 5. Descripción de las pruebas
+
+El juego consta de las siguientes pruebas:
+
+* Lanzamiento de objetos: Consiste en lanzar un objeto agarrable por el usuario a distintas dianas desde una zona del mapa. Cuando el objeto lanzable colisiona con un objetivo o pasa un tiempo máximo hace respawn en una zona al lado del usuario. Los objetos dianas  se encuentran a una distancia la cual el jugador no puede llegar de manera que no puede darles con el objeto en la mano, es decir tiene que lanzarlo; cuando dichas dianas son golpeadas por el objeto o pasa un tiempo limite desaparecen. Cuantos más dianas golpee el usuario más puntos conseguirá.
 
