@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/MedieVRal/Scenes/Prueba.unity
+- path: Assets/MedieVRal/Scenes/Throwing.unity
   isLoaded: 1
   isActive: 1
