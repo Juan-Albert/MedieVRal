@@ -10,20 +10,30 @@ namespace VRTK
     {
 
         public Transform respawnLocation;
+
         private Rigidbody myRB;
+
         private bool agarrado = false;
         private bool colisiona = false;
 
-        // Use this for initialization
-        void Start()
+        private Vector3 actualPos;
+        private Vector3 lastPos;
+        private Vector3 direction;
+
+        private float maxDistance;
+
+        private RaycastHit info;
+
+        protected void Start()
         {
             myRB = GetComponent<Rigidbody>();
+
         }
 
-        // Update is called once per frame
-        void Update()
+        protected override void Update()
         {
-            if(IsGrabbed())
+            base.Update();
+            if (IsGrabbed())
             {
                 agarrado = true;
             }
@@ -33,8 +43,27 @@ namespace VRTK
                 agarrado = false;
                 StartCoroutine(Recuperarbola());
             }
+            
+            lastPos = actualPos;
+            actualPos = transform.position;
+            direction = (actualPos - lastPos);
+            maxDistance = Vector3.Distance(actualPos, lastPos);
+            Debug.DrawRay(actualPos, direction, Color.green, 10f);
+            if(Physics.Raycast(actualPos, direction, out info, maxDistance))
+            {
+                Debug.DrawRay(actualPos, direction, Color.red, 10f);
+                if (info.collider.gameObject.tag == "Muro_cube")
+                {
+                    Debug.DrawRay(actualPos, direction, Color.blue, 10f);
+                    transform.parent = info.collider.gameObject.transform;
+
+                    Destroy(myRB);
+                }
+            }
+            
         }
 
+        /*
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.tag == "Muro_cube")
@@ -49,6 +78,7 @@ namespace VRTK
 
             }
         }
+        */
 
         IEnumerator Recuperarbola()
         {

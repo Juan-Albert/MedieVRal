@@ -17,17 +17,24 @@ public class Objectives : MonoBehaviour {
 	private bool direction = true;
 	private bool hitted = false;
 	private bool spawned = false;
+    private CapsuleCollider myCollider;
+    private MeshRenderer myMesh;
 
-	public Transform pivot;
-	// Use this for initialization
+    public Transform pivot;
+
 	void Start () {
-		initial_pos = pivot.position.z;
-		GetComponent<MeshRenderer> ().enabled = false;
+        initial_pos = pivot.position.z;
+        myMesh = GetComponent<MeshRenderer>();
+        myMesh.enabled = false;
+        myCollider = GetComponent<CapsuleCollider>();
+        myCollider.enabled = false;
 		StartCoroutine(Spawn());
-		//Debug.Log ("new Rotation:" + target_rotationZ);
-	}
+        //Debug.Log ("new Rotation:" + target_rotationZ);
 
-	// Update is called once per frame
+
+    }
+
+
 	void Update () {
 		switch (movement) 
 		{
@@ -90,8 +97,9 @@ public class Objectives : MonoBehaviour {
 	IEnumerator Spawn()
 	{
 		yield return new WaitForSeconds(spawn_time);
-		GetComponent<MeshRenderer> ().enabled = true;
-		spawned = true;
+        myMesh.enabled = true;
+        myCollider.enabled = true;
+        spawned = true;
 
 	}
 
