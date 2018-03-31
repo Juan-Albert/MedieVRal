@@ -52,6 +52,7 @@ namespace VRTK
             if(Physics.Raycast(actualPos, direction, out info, maxDistance))
             {
                 Debug.DrawRay(actualPos, direction, Color.red, 10f);
+                
                 if (info.collider.gameObject.tag == "Muro_cube")
                 {
                     Debug.DrawRay(actualPos, direction, Color.blue, 10f);

@@ -17,7 +17,7 @@ public class Objectives : MonoBehaviour {
 	private bool direction = true;
 	private bool hitted = false;
 	private bool spawned = false;
-    private CapsuleCollider myCollider;
+    private BoxCollider myCollider;
     private MeshRenderer myMesh;
 
     public Transform pivot;
@@ -26,7 +26,7 @@ public class Objectives : MonoBehaviour {
         initial_pos = pivot.position.z;
         myMesh = GetComponent<MeshRenderer>();
         myMesh.enabled = false;
-        myCollider = GetComponent<CapsuleCollider>();
+        myCollider = GetComponent<BoxCollider>();
         myCollider.enabled = false;
 		StartCoroutine(Spawn());
         //Debug.Log ("new Rotation:" + target_rotationZ);
