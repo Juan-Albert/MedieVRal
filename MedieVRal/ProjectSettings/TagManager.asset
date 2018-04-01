@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Muro_cube
   - Throwable
+  - Diana
   layers:
   - Default
   - TransparentFX

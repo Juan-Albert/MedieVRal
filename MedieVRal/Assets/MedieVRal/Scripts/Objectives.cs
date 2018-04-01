@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public enum Movement {x, y, z}
+public enum Movement {x, y, z, square, none}
 
 public class Objectives : MonoBehaviour {
 
@@ -11,19 +12,22 @@ public class Objectives : MonoBehaviour {
 	public float move_Translation = 7f;
 	public float spawn_time = 2f;
 	public Movement movement;
+    public Text score;
 
-	private float initial_pos;
+    private Vector3 initial_pos;
 
 	private bool direction = true;
 	private bool hitted = false;
 	private bool spawned = false;
+    private bool puntuar = true;
     private BoxCollider myCollider;
     private MeshRenderer myMesh;
+
 
     public Transform pivot;
 
 	void Start () {
-        initial_pos = pivot.position.z;
+        initial_pos = pivot.position;
         myMesh = GetComponent<MeshRenderer>();
         myMesh.enabled = false;
         myCollider = GetComponent<BoxCollider>();
@@ -38,61 +42,171 @@ public class Objectives : MonoBehaviour {
 	void Update () {
 		switch (movement) 
 		{
-		case Movement.z:
+            case Movement.none:
+                if(spawned)
+                {
 
-			if (spawned) {
-				if (!hitted) 
-				{
-					if (pivot.position.z < initial_pos + move_Translation && direction) 
-					{
-						pivot.Translate (0, 0, speed_Translation * Time.deltaTime);
+                    if (hitted)
+                    {
+                        pivot.Rotate(0, 0, -speed_Rotation * Time.deltaTime);
+
+                        if (pivot.rotation.eulerAngles.z <= 270 && pivot.rotation.eulerAngles.z >= 10)
+                        {
+                            pivot.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 270);
+                            StartCoroutine(EliminarDiana());
+                        }
+                    }
+
+                }
+                
+                break;
+
+            case Movement.x:
+
+                if (spawned)
+                {
+                    if (!hitted)
+                    {
+                        if (pivot.position.x < initial_pos.x + move_Translation && direction)
+                        {
+                            pivot.Translate(speed_Translation * Time.deltaTime, 0, 0);
 
 
-					} 
-					else 
-					{
-						direction = false;
-					}
+                        }
+                        else
+                        {
+                            direction = false;
+                        }
 
-					if (pivot.position.z > initial_pos - move_Translation && !direction) 
-					{
-						pivot.Translate (0, 0, -speed_Translation * Time.deltaTime);
+                        if (pivot.position.x > initial_pos.x - move_Translation && !direction)
+                        {
+                            pivot.Translate(-speed_Translation * Time.deltaTime, 0, 0);
 
-					} 
-					else 
-					{
-						direction = true;
-					}
-				} 
-				else 
-				{
+                        }
+                        else
+                        {
+                            direction = true;
+                        }
+                    }
+                    else
+                    {
 
-					pivot.Rotate (0, 0, -speed_Rotation * Time.deltaTime);
+                        pivot.Rotate(0, 0, -speed_Rotation * Time.deltaTime);
 
-					if (pivot.rotation.eulerAngles.z <= 270 && pivot.rotation.eulerAngles.z >= 10) 
-					{
-						pivot.eulerAngles = new Vector3 (transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 270);
-						StartCoroutine (EliminarDiana ());
-					}
+                        if (pivot.rotation.eulerAngles.z <= 270 && pivot.rotation.eulerAngles.z >= 10)
+                        {
+                            pivot.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 270);
+                            StartCoroutine(EliminarDiana());
+                        }
 
-				}
+                    }
 
-			}
-			break;
+                }
+
+                break;
+
+            case Movement.y:
+
+                if (spawned)
+                {
+                    if (!hitted)
+                    {
+                        if (pivot.position.y < initial_pos.y + move_Translation && direction)
+                        {
+                            pivot.Translate(0, speed_Translation * Time.deltaTime, 0);
+
+
+                        }
+                        else
+                        {
+                            direction = false;
+                        }
+
+                        if (pivot.position.y > initial_pos.y - move_Translation && !direction)
+                        {
+                            pivot.Translate(0, -speed_Translation * Time.deltaTime, 0);
+
+                        }
+                        else
+                        {
+                            direction = true;
+                        }
+                    }
+                    else
+                    {
+
+                        pivot.Rotate(0, 0, -speed_Rotation * Time.deltaTime);
+
+                        if (pivot.rotation.eulerAngles.z <= 270 && pivot.rotation.eulerAngles.z >= 10)
+                        {
+                            pivot.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 270);
+                            StartCoroutine(EliminarDiana());
+                        }
+
+                    }
+
+                }
+
+                break;
+
+		    case Movement.z:
+
+			    if (spawned) {
+				    if (!hitted) 
+				    {
+					    if (pivot.position.z < initial_pos.z + move_Translation && direction) 
+					    {
+						    pivot.Translate (0, 0, speed_Translation * Time.deltaTime);
+
+
+					    } 
+					    else 
+					    {
+						    direction = false;
+					    }
+
+					    if (pivot.position.z > initial_pos.z - move_Translation && !direction) 
+					    {
+						    pivot.Translate (0, 0, -speed_Translation * Time.deltaTime);
+
+					    } 
+					    else 
+					    {
+						    direction = true;
+					    }
+				    } 
+				    else 
+				    {
+
+					    pivot.Rotate (0, 0, -speed_Rotation * Time.deltaTime);
+
+					    if (pivot.rotation.eulerAngles.z <= 270 && pivot.rotation.eulerAngles.z >= 10) 
+					    {
+						    pivot.eulerAngles = new Vector3 (transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 270);
+						    StartCoroutine (EliminarDiana ());
+					    }
+
+				    }
+
+			    }
+			    break;
 			
 		}
 
 
 	}
 
-	private void OnCollisionEnter(Collision collision)
-	{
-		if (collision.gameObject.tag == "Throwable")
-		{
-			
-			hitted = true;
-		}
-	}
+    public void Hitted()
+    {
+        hitted = true;
+        if (puntuar)
+        {
+            score.text = (int.Parse(score.text) + 1).ToString();
+            puntuar = false;
+        }
+
+
+    }
 
 	IEnumerator Spawn()
 	{
@@ -105,8 +219,7 @@ public class Objectives : MonoBehaviour {
 
 	IEnumerator EliminarDiana()
 	{
-
-		yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(5);
 		Destroy (pivot.gameObject);
 		Destroy(this.gameObject);
 
