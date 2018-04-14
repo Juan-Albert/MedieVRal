@@ -25,6 +25,8 @@ Para la creación de este proyecto se han utilizado los siguientes Assets:
 
 * Medieval Town (Base): Paquete de modelos medievales.  Licence owner Kenney.
 
+* Medieval catapult 3d model : https://free3d.com/3d-model/medieval-catapult-74683.html
+
 ### 5. Descripción de las pruebas
 
 El juego consta de las siguientes pruebas:
