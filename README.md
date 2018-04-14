@@ -23,7 +23,15 @@ Para el uso de este proyecto es necesario el siguiente software:
 
 Para la creación de este proyecto se han utilizado los siguientes Assets:
 
-* Medieval Town (Base): Paquete de modelos medievales.  Licence owner Kenney.
+Unity Assets:
+
+* Free Demo Rock: Modelo de roca. Licence owner Grumpntug.
+
+* Medieval Barrows and Wagons: Modelos de carretas. Licence owner Kiria.
+
+* Steel Dagger PBR: Modelo de cuchillo. Licence owner Johnny's Place.
+
+Otros:
 
 * Medieval catapult 3d model : https://free3d.com/3d-model/medieval-catapult-74683.html
 
