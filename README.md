@@ -31,6 +31,8 @@ Unity Assets:
 
 * Steel Dagger PBR: Modelo de cuchillo. Licence owner Johnny's Place.
 
+* UF Creator LITE: Modelo de campamento. Licence owner Aquarius Max.
+
 Otros:
 
 * Medieval catapult 3d model : https://free3d.com/3d-model/medieval-catapult-74683.html
@@ -39,9 +41,9 @@ Otros:
 
 El juego consta de las siguientes pruebas:
 
-* Lanzamiento de objetos: Consiste en lanzar un objeto agarrable por el usuario a distintas dianas desde una zona del mapa. Cuando el objeto lanzable colisiona con un objetivo o pasa un tiempo máximo hace respawn en una zona al lado del usuario. Los objetos dianas  se encuentran a una distancia la cual el jugador no puede llegar de manera que no puede darles con el objeto en la mano, es decir tiene que lanzarlo; cuando dichas dianas son golpeadas por el objeto o pasa un tiempo limite desaparecen. Cuantos más dianas golpee el usuario más puntos conseguirá.
+* Lanzamiento de objetos: Consiste en lanzar un objeto agarrable por el usuario a distintas dianas desde una zona del mapa. Al lado del usuario se encuentra una caja de munición la cual le permite coger munición con el botón Grip del controlador. Los objetos dianas  se encuentran a una distancia la cual el jugador no puede llegar de manera que no puede darles con el objeto en la mano, es decir tiene que lanzarlo; cuando dichas dianas son golpeadas por el objeto o pasa un tiempo limite desaparecen. Cuantos más dianas golpee el usuario más puntos conseguirá.
 
-* Una fase de tirachinas: el objetivo consiste en lanzar munición con una catapulta a una zona determinada para derribar diferentes objetivos.  
+* Una fase de tirachinas: el objetivo consiste en lanzar munición con una catapulta a una zona determinada para derribar diferentes objetivos. En la zona de la catapulta el usuario tiene 4 objetos interactuables: una manivela para recargar la catapulta, otra manivela para rotar la catapulta, una palanca para accionar la catapulta y munición que se puede colocar en la cabecera de la catapulta. Los objetivos son castillos en los cuales hay murallas y casas, los objetos casas dan más puntos si son golpeados por la munición pero hay murallas que las protegen y hay que derrivarlas primero.
 
 * Una fase de justa: el objetivo es simular una justa de caballeros imitando el movimiento de la lanza para alcanzar un objetivo, como dificultad adicional se podría implementar un modo en el que el jugador dispone de escudo y lanza y se enfrenta a una ia.    
 	
