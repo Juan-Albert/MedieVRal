@@ -7,6 +7,9 @@ TagManager:
   - Throwable
   - Diana
   - Roca
+  - Interact
+  - Muro
+  - Casa
   layers:
   - Default
   - TransparentFX

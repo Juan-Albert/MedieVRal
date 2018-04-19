@@ -140,6 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d25630cda1e7bf4184ea3d79c63cc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particle: {fileID: 1586910636378068, guid: 0eff590f628a37149a2ad4a1164953ad, type: 2}
+  score: {fileID: 0}
 --- !u!135 &135259951410243612
 SphereCollider:
   m_ObjectHideFlags: 1
