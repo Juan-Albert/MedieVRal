@@ -37,7 +37,9 @@ Otros:
 
 * Medieval catapult 3d model : https://free3d.com/3d-model/medieval-catapult-74683.html
 
-* Flintlock pistol 3d model: https://free3d.com/3d-model/flintlock-pistol-66797.html
+* Flintlock pistol 3d model: https://sketchfab.com/models/792ca024195d4292829d8d0b304ced30#
+
+* Cannon Ball 3d model : https://www.turbosquid.com/3d-models/free-cannon-ball-3d-model/696049
 
 ### 5. Descripción de las pruebas
 
