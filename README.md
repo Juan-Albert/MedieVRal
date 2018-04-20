@@ -33,6 +33,8 @@ Unity Assets:
 
 * UF Creator LITE: Modelo de campamento. Licence owner Aquarius Max.
 
+* Medieval Stone Keep : Modelo de muros y torres. Licence owner Lylek Games.
+
 Otros:
 
 * Medieval catapult 3d model : https://free3d.com/3d-model/medieval-catapult-74683.html
