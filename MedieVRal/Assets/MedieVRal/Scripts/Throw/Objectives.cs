@@ -19,7 +19,10 @@ public class Objectives : MonoBehaviour {
     public Movement movement;
     [Tooltip("Objeto donde se va a almacenar la puntuación del jugador.")]
     public Text score;
-
+    [Tooltip("Mesh del objeto Diana.")]
+    public MeshRenderer myMesh;
+    [Tooltip("Punto de Rotación de la diana.")]
+    public Transform pivot;
     //Posición inicial de la diana.
     private Vector3 initial_pos;
 
@@ -32,14 +35,13 @@ public class Objectives : MonoBehaviour {
     //Variable booleana para puntuar cuando se ha alcanzado con el objeto lanzable.
     private bool puntuar = true;
     private BoxCollider myCollider;
-    private MeshRenderer myMesh;
+    
 
 
-    public Transform pivot;
+    
 
 	void Start () {
         initial_pos = pivot.position;
-        myMesh = GetComponent<MeshRenderer>();
         myMesh.enabled = false;
         myCollider = GetComponent<BoxCollider>();
         myCollider.enabled = false;
