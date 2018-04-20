@@ -7,18 +7,29 @@ public enum Movement {x, y, z, square, none}
 
 public class Objectives : MonoBehaviour {
 
-	public float speed_Translation = 5f;
-	public float speed_Rotation = 5f;
-	public float move_Translation = 7f;
-	public float spawn_time = 2f;
-	public Movement movement;
+    [Tooltip("Velocidad con la que se translada el objeto.")]
+    public float speed_Translation = 5f;
+    [Tooltip("Velocidad con la que rota el objeto.")]
+    public float speed_Rotation = 5f;
+    [Tooltip("Distancia que se mueve el objeto.")]
+    public float move_Translation = 7f;
+    [Tooltip("Tiempo que tarda en aparecer el objeto.")]
+    public float spawn_time = 2f;
+    [Tooltip("Tipo de movimiento que va a realizar la diana.")]
+    public Movement movement;
+    [Tooltip("Objeto donde se va a almacenar la puntuación del jugador.")]
     public Text score;
 
+    //Posición inicial de la diana.
     private Vector3 initial_pos;
 
+    //Variable booleana que utilizamos para asignar la dirección de la diana.
 	private bool direction = true;
+    //Variable booleana que utilizamos para saber si se ha alcanzado la diana con el objeto lanzable.
 	private bool hitted = false;
+    //Variable booleana que utilizamos para saber si ha aparecido la diana.
 	private bool spawned = false;
+    //Variable booleana para puntuar cuando se ha alcanzado con el objeto lanzable.
     private bool puntuar = true;
     private BoxCollider myCollider;
     private MeshRenderer myMesh;
