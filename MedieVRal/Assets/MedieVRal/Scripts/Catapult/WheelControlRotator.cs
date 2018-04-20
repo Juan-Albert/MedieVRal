@@ -25,7 +25,7 @@
         private void HandleChange(object sender, Control3DEventArgs e)
         {
             text.text = e.value.ToString() + "(" + e.normalizedValue.ToString() + "%)";
-            catapult.transform.eulerAngles = new Vector3(catapult.transform.rotation.eulerAngles.x,-50 +  ((100 / 100) * e.value), catapult.transform.rotation.eulerAngles.z);
+            catapult.transform.eulerAngles = new Vector3(catapult.transform.rotation.eulerAngles.x,60 +  ((100 / 100) * e.value), catapult.transform.rotation.eulerAngles.z);
         }
     }
 }

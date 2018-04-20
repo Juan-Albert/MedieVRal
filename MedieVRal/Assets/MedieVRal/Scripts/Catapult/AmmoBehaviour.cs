@@ -13,8 +13,9 @@ public class AmmoBehaviour : MonoBehaviour {
 
 
     void Start () {
+        this.transform.Rotate(0,0,-30);
         myRB = GetComponent<Rigidbody>();
-        myRB.AddForce(-transform.right * 1000f);
+        myRB.AddForce(-transform.right * 4500f);
     }
 	
 	
@@ -29,7 +30,7 @@ public class AmmoBehaviour : MonoBehaviour {
             
             Instantiate(particle, collision.gameObject.transform.position, Quaternion.identity);
             //score.text = (int.Parse(score.text) + 1).ToString();
-            Destroy(collision.gameObject.transform.parent);
+            Destroy(collision.gameObject.transform.parent.gameObject);
             Destroy(this.gameObject);
 
         }

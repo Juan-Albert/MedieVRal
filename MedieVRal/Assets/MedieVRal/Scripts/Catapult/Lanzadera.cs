@@ -10,7 +10,7 @@ public class Lanzadera : MonoBehaviour {
 
     private bool activated = false;
 
-    private float speed = 300f;
+    private float speed = 400f;
 
     private Transform roca;
 
@@ -33,7 +33,7 @@ public class Lanzadera : MonoBehaviour {
             {
                 this.transform.eulerAngles = new Vector3(this.transform.rotation.eulerAngles.x, this.transform.rotation.eulerAngles.y, 0);
                 activated = false;
-                manivela.transform.eulerAngles = new Vector3(0, 0, 0);
+                manivela.transform.eulerAngles = new Vector3(0, 115, 0);
                 roca = this.gameObject.transform.Find("rock");
                 
                 if(roca != null)
@@ -42,7 +42,7 @@ public class Lanzadera : MonoBehaviour {
 
                     Destroy(roca.gameObject);
                     Instantiate(ammo, ammoPosition, this.transform.rotation);
-                    ammo.transform.parent = this.transform.parent;
+                    //ammo.transform.parent = this.transform.parent;
                     //ammo.transform.Translate(ammoPosition);
                     //ammo.GetComponent<Rigidbody>().AddForce(transform.forward * 1000000000f, ForceMode.VelocityChange);
                 }
