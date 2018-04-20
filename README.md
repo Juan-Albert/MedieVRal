@@ -37,6 +37,8 @@ Otros:
 
 * Medieval catapult 3d model : https://free3d.com/3d-model/medieval-catapult-74683.html
 
+* Flintlock pistol 3d model: https://free3d.com/3d-model/flintlock-pistol-66797.html
+
 ### 5. Descripción de las pruebas
 
 El juego consta de las siguientes pruebas:
