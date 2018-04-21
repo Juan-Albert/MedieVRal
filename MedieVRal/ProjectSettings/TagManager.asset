@@ -10,6 +10,7 @@ TagManager:
   - Interact
   - Muro
   - Casa
+  - Ammo
   layers:
   - Default
   - TransparentFX

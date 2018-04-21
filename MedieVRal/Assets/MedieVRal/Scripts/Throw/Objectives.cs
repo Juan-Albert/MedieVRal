@@ -234,7 +234,6 @@ public class Objectives : MonoBehaviour {
 	{
         yield return new WaitForSeconds(5);
 		Destroy (pivot.gameObject);
-		Destroy(this.gameObject);
 
 	}
 }

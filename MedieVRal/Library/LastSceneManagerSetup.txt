@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/VRTK/Examples/035_Controller_OpacityAndHighlighting.unity
+- path: Assets/MedieVRal/Scenes/Shooting.unity
   isLoaded: 1
   isActive: 1

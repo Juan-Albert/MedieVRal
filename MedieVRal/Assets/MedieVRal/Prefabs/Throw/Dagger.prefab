@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 65361565062250466}
   - component: {fileID: 54211739232795836}
   - component: {fileID: 114871784174881340}
-  - component: {fileID: 114564140587718746}
+  - component: {fileID: 114632147803957254}
   - component: {fileID: 114653085225615540}
   - component: {fileID: 114634277219824322}
+  - component: {fileID: 114068161337046154}
   m_Layer: 0
   m_Name: Dagger
   m_TagString: Untagged
@@ -174,6 +175,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3601128, y: 0.015819311, z: 0.08633646}
   m_Center: {x: -0.07169634, y: 0.002649188, z: 0.000023707747}
+--- !u!114 &114068161337046154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1510783006176086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817f15b2a0426974bb4e88ef34aa22b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hideControllerOnTouch: 0
+  hideDelayOnTouch: 0
+  hideControllerOnGrab: 1
+  hideDelayOnGrab: 0
+  hideControllerOnUse: 0
+  hideDelayOnUse: 0
 --- !u!114 &114192905137474494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   sdkOverrides: []
---- !u!114 &114564140587718746
+--- !u!114 &114632147803957254
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -195,15 +213,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1510783006176086}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   precisionGrab: 0
   rightSnapHandle: {fileID: 4980550254215570}
   leftSnapHandle: {fileID: 4980550254215570}
   throwVelocityWithAttachDistance: 0
-  throwMultiplier: 2
-  onGrabCollisionDelay: 0
+  throwMultiplier: 2.5
+  onGrabCollisionDelay: 0.5
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
 --- !u!114 &114634277219824322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -259,7 +279,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114564140587718746}
+  grabAttachMechanicScript: {fileID: 114632147803957254}
   secondaryGrabActionScript: {fileID: 114653085225615540}
   isUsable: 0
   holdButtonToUse: 0

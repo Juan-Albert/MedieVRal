@@ -9,7 +9,7 @@ public class AmmoBehaviour : MonoBehaviour {
 
     public GameObject particle;
 
-    public Text score;
+    public GameObject score;
 
 
     void Start () {
@@ -29,7 +29,7 @@ public class AmmoBehaviour : MonoBehaviour {
         {
             
             Instantiate(particle, collision.gameObject.transform.position, Quaternion.identity);
-            //score.text = (int.Parse(score.text) + 1).ToString();
+            score.GetComponent<Text>().text = (int.Parse(score.GetComponent<Text>().text) + 1).ToString();
             Destroy(collision.gameObject.transform.parent.gameObject);
             Destroy(this.gameObject);
 
@@ -39,7 +39,7 @@ public class AmmoBehaviour : MonoBehaviour {
         {
            
             Instantiate(particle, collision.gameObject.transform.position, Quaternion.identity);
-            //score.text = (int.Parse(score.text) + 3).ToString();
+            score.GetComponent<Text>().text = (int.Parse(score.GetComponent<Text>().text) + 3).ToString();
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
 

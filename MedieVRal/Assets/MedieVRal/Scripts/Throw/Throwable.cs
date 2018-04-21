@@ -26,9 +26,6 @@ namespace VRTK
         private Vector3 lastPos;
         private Vector3 direction;
 
-        //Objeto objetivo alcanzado por el objeto lanzable.
-        private Objectives target;
-
         //Objeto que almacena la información de la colisión
         private RaycastHit info;
 
@@ -86,8 +83,7 @@ namespace VRTK
                         Destroy(myRB);
                         transform.position = info.point;
                         //Por último se obtiene el objetivo y se lanza el método de que ha sido alcanzado.
-                        target = info.collider.gameObject.GetComponent<Objectives>();
-                        target.Hitted();
+                        info.collider.gameObject.GetComponent<Objectives>().Hitted();
                     }
 
                 }
