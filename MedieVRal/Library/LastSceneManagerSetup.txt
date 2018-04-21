@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/MedieVRal/Scenes/Shooting.unity
+- path: Assets/MedieVRal/Scenes/Bow.unity
   isLoaded: 1
   isActive: 1

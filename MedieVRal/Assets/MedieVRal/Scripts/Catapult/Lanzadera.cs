@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Lanzadera : MonoBehaviour {
 
 
     public GameObject manivela;
     public GameObject ammo;
+    public Text score;
 
     private bool activated = false;
 
@@ -41,7 +43,8 @@ public class Lanzadera : MonoBehaviour {
                     ammoPosition = roca.position;
 
                     Destroy(roca.gameObject);
-                    Instantiate(ammo, ammoPosition, this.transform.rotation);
+                    GameObject ammunition = Instantiate(ammo, ammoPosition, this.transform.rotation) as GameObject;
+                    ammunition.GetComponent<AmmoBehaviour>().SetScore(score);
                     //ammo.transform.parent = this.transform.parent;
                     //ammo.transform.Translate(ammoPosition);
                     //ammo.GetComponent<Rigidbody>().AddForce(transform.forward * 1000000000f, ForceMode.VelocityChange);

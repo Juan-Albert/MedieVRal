@@ -9,7 +9,7 @@ public class AmmoBehaviour : MonoBehaviour {
 
     public GameObject particle;
 
-    public GameObject score;
+    public Text score;
 
 
     void Start () {
@@ -44,5 +44,10 @@ public class AmmoBehaviour : MonoBehaviour {
             Destroy(this.gameObject);
 
         }
+    }
+
+    public void SetScore(Text newScore)
+    {
+        score = newScore;
     }
 }
