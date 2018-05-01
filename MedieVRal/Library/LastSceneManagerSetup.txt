@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/MedieVRal/Scenes/Bow.unity
+- path: Assets/MedieVRal/Scenes/Catapult2.unity
   isLoaded: 1
   isActive: 1
