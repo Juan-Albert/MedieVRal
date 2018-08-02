@@ -4,4 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/MedieVRal/Scenes/SelectLevel.unity
+    guid: 802ad5314b1619f4789fe4f1824139f0
+  - enabled: 1
+    path: Assets/MedieVRal/Scenes/Throw_camp.unity
+    guid: 818a1fd86a1a55349b2e7ccf229899ec
+  - enabled: 1
+    path: Assets/MedieVRal/Scenes/Catapult2.unity
+    guid: 833129cf3c28f794d91c8136e8da8374
+  - enabled: 1
+    path: Assets/MedieVRal/Scenes/Shooting.unity
+    guid: cc41387e28d6f274f92ade083e1e3207
