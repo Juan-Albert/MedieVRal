@@ -1347,6 +1347,11 @@ Prefab:
       propertyPath: score
       value: 
       objectReference: {fileID: 291041816}
+    - target: {fileID: 114997773064099200, guid: 468bb5e0700f7df47a90519b7b7642b6,
+        type: 2}
+      propertyPath: throwManager
+      value: 
+      objectReference: {fileID: 760195588}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 468bb5e0700f7df47a90519b7b7642b6, type: 2}
   m_IsPrefabParent: 0
@@ -2193,6 +2198,7 @@ MonoBehaviour:
   score: {fileID: 291041816}
   myMesh: {fileID: 1893628041}
   pivot: {fileID: 1605512704}
+  throwManager: {fileID: 760195588}
 --- !u!65 &311483826
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4799,6 +4805,46 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c8c19b0bec3950409278f299ba7f316, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &760195586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 760195587}
+  - component: {fileID: 760195588}
+  m_Layer: 0
+  m_Name: ThrowManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &760195587
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 760195586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 351.3, y: 14.63, z: 301.12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &760195588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 760195586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2a00f5f1995be499f7fcf15168361d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &767134001
 Prefab:
   m_ObjectHideFlags: 0
@@ -9739,6 +9785,7 @@ MonoBehaviour:
   score: {fileID: 291041816}
   myMesh: {fileID: 1285264464}
   pivot: {fileID: 1746208232}
+  throwManager: {fileID: 760195588}
 --- !u!65 &1586920580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11335,6 +11382,7 @@ MonoBehaviour:
   score: {fileID: 291041816}
   myMesh: {fileID: 215742492}
   pivot: {fileID: 1921510687}
+  throwManager: {fileID: 760195588}
 --- !u!65 &1791702302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13008,6 +13056,7 @@ MonoBehaviour:
   score: {fileID: 291041816}
   myMesh: {fileID: 40851216}
   pivot: {fileID: 1141790579}
+  throwManager: {fileID: 760195588}
 --- !u!65 &2002706282
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -23,6 +23,8 @@ public class Objectives : MonoBehaviour {
     public MeshRenderer myMesh;
     [Tooltip("Punto de Rotación de la diana.")]
     public Transform pivot;
+    public ThrowManager throwManager;
+
     //Posición inicial de la diana.
     private Vector3 initial_pos;
 
@@ -214,6 +216,7 @@ public class Objectives : MonoBehaviour {
         hitted = true;
         if (puntuar)
         {
+            throwManager.IncreasePoints();
             score.text = (int.Parse(score.text) + 1).ToString();
             puntuar = false;
         }
@@ -232,6 +235,7 @@ public class Objectives : MonoBehaviour {
 
 	IEnumerator EliminarDiana()
 	{
+        throwManager.Target_Destroyed();
         yield return new WaitForSeconds(5);
 		Destroy (pivot.gameObject);
 

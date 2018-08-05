@@ -5392,6 +5392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 739718678}
   - component: {fileID: 739718677}
+  - component: {fileID: 739718679}
   m_Layer: 0
   m_Name: '[HTCSDK]'
   m_TagString: Untagged
@@ -5433,6 +5434,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &739718679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 739718676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc93a1717f89eb4e8c0e72e1325fea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1669092324517254, guid: 18e97ce045102f24c9ba137eee6f6b85,
+    type: 2}
 --- !u!1001 &745121554
 Prefab:
   m_ObjectHideFlags: 0
@@ -7748,7 +7762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precisionGrab: 0
+  precisionGrab: 1
   rightSnapHandle: {fileID: 0}
   leftSnapHandle: {fileID: 0}
   throwVelocityWithAttachDistance: 0
