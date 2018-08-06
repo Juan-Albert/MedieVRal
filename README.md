@@ -43,6 +43,12 @@ Otros:
 
 * Cannon Ball 3d model : https://www.turbosquid.com/3d-models/free-cannon-ball-3d-model/696049
 
+* Horse with Saddle 3D Model: http://www.cadnav.com/3d-models/model-46223.html
+
+* Rings: https://www.models-resource.com/custom_edited/sonicthehedgehogcustoms/model/10616/
+
+* Lance: https://www.turbosquid.com/FullPreview/Index.cfm/ID/1286837
+
 ### 5. Descripción de las pruebas
 
 El juego consta de las siguientes pruebas:
