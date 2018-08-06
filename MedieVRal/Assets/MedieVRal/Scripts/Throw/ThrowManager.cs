@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ThrowManager : MonoBehaviour {
+
+    [Tooltip("Objeto donde se va a almacenar la puntuación del jugador.")]
+    public Text scoreUI;
 
     private int n_targets = 5;
     private int targetsDestroyed = 0;
@@ -18,6 +22,8 @@ public class ThrowManager : MonoBehaviour {
 
     public void IncreasePoints()
     {
+
+        scoreUI.text = (int.Parse(scoreUI.text) + 1).ToString();
         score++;
     }
 

@@ -2195,7 +2195,6 @@ MonoBehaviour:
   move_Translation: 2
   spawn_time: 5
   movement: 1
-  score: {fileID: 291041816}
   myMesh: {fileID: 1893628041}
   pivot: {fileID: 1605512704}
   throwManager: {fileID: 760195588}
@@ -4845,6 +4844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea2a00f5f1995be499f7fcf15168361d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreUI: {fileID: 291041816}
 --- !u!1001 &767134001
 Prefab:
   m_ObjectHideFlags: 0
@@ -9782,7 +9782,6 @@ MonoBehaviour:
   move_Translation: 2
   spawn_time: 3
   movement: 0
-  score: {fileID: 291041816}
   myMesh: {fileID: 1285264464}
   pivot: {fileID: 1746208232}
   throwManager: {fileID: 760195588}
@@ -11379,7 +11378,6 @@ MonoBehaviour:
   move_Translation: 2
   spawn_time: 9
   movement: 1
-  score: {fileID: 291041816}
   myMesh: {fileID: 215742492}
   pivot: {fileID: 1921510687}
   throwManager: {fileID: 760195588}
@@ -13053,7 +13051,6 @@ MonoBehaviour:
   move_Translation: 2
   spawn_time: 7
   movement: 0
-  score: {fileID: 291041816}
   myMesh: {fileID: 40851216}
   pivot: {fileID: 1141790579}
   throwManager: {fileID: 760195588}

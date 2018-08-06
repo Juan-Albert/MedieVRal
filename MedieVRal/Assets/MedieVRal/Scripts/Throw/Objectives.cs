@@ -17,8 +17,6 @@ public class Objectives : MonoBehaviour {
     public float spawn_time = 2f;
     [Tooltip("Tipo de movimiento que va a realizar la diana.")]
     public Movement movement;
-    [Tooltip("Objeto donde se va a almacenar la puntuación del jugador.")]
-    public Text score;
     [Tooltip("Mesh del objeto Diana.")]
     public MeshRenderer myMesh;
     [Tooltip("Punto de Rotación de la diana.")]
@@ -217,7 +215,6 @@ public class Objectives : MonoBehaviour {
         if (puntuar)
         {
             throwManager.IncreasePoints();
-            score.text = (int.Parse(score.text) + 1).ToString();
             puntuar = false;
         }
 

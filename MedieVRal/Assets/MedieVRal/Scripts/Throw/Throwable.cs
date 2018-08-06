@@ -33,7 +33,7 @@ namespace VRTK
         private bool agarrado = false;
 
         //Variable booleana que utilizamos si se ha lanzado el objeto.
-        private bool lanzado = false;
+        private bool inFlight = false;
 
 
         protected void Start()
@@ -59,10 +59,10 @@ namespace VRTK
             {
                 agarrado = false;
                 myBC.enabled = false;
-                lanzado = true;
+                inFlight = true;
             }
 
-            if (lanzado)
+            if (inFlight)
             {
                 lastPos = actualPos;
                 actualPos = transform.position;
