@@ -11,6 +11,14 @@ TagManager:
   - Muro
   - Casa
   - Ammo
+  - Cubes
+  - Spheres
+  - Leg
+  - Arm
+  - Saucers
+  - Torso
+  - OtherSaucers
+  - Bomb
   layers:
   - Default
   - TransparentFX

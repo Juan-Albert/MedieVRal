@@ -68,15 +68,15 @@ namespace VRTK
                 actualPos = transform.position;
                 direction = (actualPos - lastPos);
                 maxDistance = Vector3.Distance(actualPos, lastPos);
-                //Debug.DrawRay(lastPos, direction, Color.green, 10f);
+                Debug.DrawRay(lastPos, direction, Color.green, 10f);
                 //Se usa la herramienta Raycast para generar rayos que calculen la colisión con los objetivos dada una distancia máxima.
                 if (Physics.Raycast(lastPos, direction, out info, maxDistance))
                 {
-                    //Debug.DrawRay(lastPos, direction, Color.red, 10f);
+                    Debug.DrawRay(lastPos, direction, Color.red, 10f);
                     //Se comprueba si se ha colisionado con una diana.
                     if (info.collider.gameObject.tag == "Diana")
                     {
-                        //Debug.DrawRay(lastPos, direction, Color.blue, 10f);
+                        Debug.DrawRay(lastPos, direction, Color.blue, 10f);
                         //Para que el objeto lanzable se quede 'clavado' en el objetivo lo asignamos como su hijo y le quitamos el
                         //componente RigitBody para que no tenga gravedad y caiga al suelo.
                         transform.parent = info.collider.gameObject.transform.parent;
