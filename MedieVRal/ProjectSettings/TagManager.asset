@@ -19,6 +19,7 @@ TagManager:
   - Torso
   - OtherSaucers
   - Bomb
+  - Shield
   layers:
   - Default
   - TransparentFX
