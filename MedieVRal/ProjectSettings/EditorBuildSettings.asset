@@ -17,3 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MedieVRal/Scenes/Shooting.unity
     guid: cc41387e28d6f274f92ade083e1e3207
+  - enabled: 1
+    path: Assets/MedieVRal/Scenes/Jousting.unity
+    guid: 4eab1fedfb39ccc4aac9f9a1501bb5dd
+  - enabled: 1
+    path: Assets/MedieVRal/Scenes/Bow.unity
+    guid: e5a545c17be0bc64aae924e80105d16f
+  - enabled: 1
+    path: Assets/MedieVRal/Scenes/Climbing3.unity
+    guid: bfd37dd9ccef3ba4f805fe19fbedf8a3
+  - enabled: 1
+    path: Assets/MedieVRal/Scenes/Shield.unity
+    guid: eaf1829d0f5125344a64cd97cca51d2c

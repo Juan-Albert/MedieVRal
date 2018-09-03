@@ -49,7 +49,7 @@ public class ShieldManager : MonoBehaviour {
         foreach (Transform spawn in arrowSpawns)
         {
             GameObject warning = Instantiate(particle, spawn.transform.position, spawn.transform.rotation) as GameObject;
-            yield return new WaitForSeconds(3);         
+            yield return new WaitForSeconds(20);         
             Destroy(warning);
             Instantiate(arrow, spawn.transform.position, spawn.transform.rotation);
             

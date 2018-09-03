@@ -93,4 +93,43 @@ public class GameManager : MonoBehaviour {
                 break;
         }
     }
+
+
+    public int GetPoints(int game)
+    {
+        switch (game)
+        {
+            case 1:
+
+                return throwPoints;
+
+            case 2:
+
+                return catapultPoints;
+
+            case 3:
+
+                return shootingPoints;
+
+            case 4:
+
+                return joustingPoints;
+
+            case 5:
+
+                return bowPoints;
+
+            case 6:
+
+                return climbingPoints;
+
+            case 7:
+
+                return shieldPoints;
+
+            default:
+
+                return 0;
+        }
+    }
 }
