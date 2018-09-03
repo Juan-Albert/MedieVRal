@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/MedieVRal/Scenes/Shield.unity
+- path: Assets/MedieVRal/Scenes/SelectLevel.unity
   isLoaded: 1
   isActive: 1
