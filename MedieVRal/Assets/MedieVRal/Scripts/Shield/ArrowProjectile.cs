@@ -12,7 +12,8 @@ public class ArrowProjectile : MonoBehaviour {
     private Vector3 dir;
 
     private GameObject player;
-
+    private ShieldManager shieldManager;
+ 
     private bool hit = false;
 
     //Distancia entre una posición y la anterior para detectar colision.
@@ -31,13 +32,14 @@ public class ArrowProjectile : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         player = GameObject.Find("Camera (eye)");
         transform.LookAt(player.transform.position);
+        shieldManager = GameObject.Find("ShieldManager").GetComponent<ShieldManager>();
     }
 
     void FixedUpdate()
     {
         if(!hit)
         {
-            rb.velocity = transform.forward * 1;
+            rb.velocity = transform.forward * 10;
 
             t = t + Time.deltaTime;
             if (t > 50.0f)
@@ -61,6 +63,7 @@ public class ArrowProjectile : MonoBehaviour {
                 if (info.collider.gameObject.tag == "MainCamera")
                 {
                     Debug.DrawRay(lastPos, direction, Color.blue, 10f);
+                    shieldManager.DecreasePoints();                  
                     Destroy(this.gameObject);
                 }
                 else if (info.collider.gameObject.tag == "Shield")
@@ -70,7 +73,6 @@ public class ArrowProjectile : MonoBehaviour {
                     transform.parent = info.collider.gameObject.transform.parent;
                     Destroy(rb);
                     transform.position = info.point;
-                    Debug.Log("Exito");
 
                 }
 
@@ -80,7 +82,7 @@ public class ArrowProjectile : MonoBehaviour {
 
 
     }
-
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "MainCamera")
@@ -96,6 +98,7 @@ public class ArrowProjectile : MonoBehaviour {
 
         }
     }
+    */
 
 
 }

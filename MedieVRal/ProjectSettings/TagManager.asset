@@ -20,6 +20,9 @@ TagManager:
   - OtherSaucers
   - Bomb
   - Shield
+  - Tower
+  - GunPowder
+  - Pitcher
   layers:
   - Default
   - TransparentFX

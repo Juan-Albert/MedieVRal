@@ -11,49 +11,53 @@ public class ShieldManager : MonoBehaviour {
     public GameObject arrow;
     public GameObject particle;
 
-    private int n_targets = 5;
-    private int targetsDestroyed = 0;
-    private int score = 0;
+    private int score = 10;
 
-    
+    private bool end = false;
+
 
     private void Start()
     {
         StartCoroutine(SpawnArrows());
+        StartCoroutine(GameTime());
         
     }
 
-    private void Update()
+    Transform GetRandomInArray(Transform[] array)
     {
-        if (targetsDestroyed == n_targets)
+        return array[Random.Range(0, array.Length)];
+    }
+
+    public void DecreasePoints()
+    {
+        if (score > 0)
         {
-            GameManager.instance.CheckScore(5, score);
+            score--;
+            scoreUI.text = (score).ToString();
         }
-
+        
+        
     }
 
-    public void IncreasePoints()
-    {
-
-        scoreUI.text = (int.Parse(scoreUI.text) + 1).ToString();
-        score++;
-    }
-
-    public void Target_Destroyed()
-    {
-        targetsDestroyed++;
-    }
 
     IEnumerator SpawnArrows()
     {
-        foreach (Transform spawn in arrowSpawns)
+        while(!end)
         {
+            Transform spawn = GetRandomInArray(arrowSpawns);
             GameObject warning = Instantiate(particle, spawn.transform.position, spawn.transform.rotation) as GameObject;
-            yield return new WaitForSeconds(20);         
+            yield return new WaitForSeconds(5);         
             Destroy(warning);
             Instantiate(arrow, spawn.transform.position, spawn.transform.rotation);
             
         }
         
+    }
+
+    IEnumerator GameTime()
+    {
+        yield return new WaitForSeconds(34);
+        end = true;
+        GameManager.instance.CheckScore(7, score);
     }
 }

@@ -11,6 +11,7 @@
         private Transform slot;
 
         private bool load = false;
+        private bool gunPowder = false;
 
         public override void StartUsing(VRTK_InteractUse usingObject)
         {
@@ -28,6 +29,7 @@
             if(load)
             {
                 Instantiate(bullet, slot.transform.position, slot.transform.rotation);
+                gunPowder = false;
                 load = false;
             }
             /*
@@ -41,7 +43,16 @@
 
         public void IsLoaded()
         {
-            load = true;
+            if(gunPowder)
+            {
+                load = true;
+            }
+            
+        }
+
+        public void ChargeGunpowder()
+        {
+            gunPowder = true;
         }
     }
 }

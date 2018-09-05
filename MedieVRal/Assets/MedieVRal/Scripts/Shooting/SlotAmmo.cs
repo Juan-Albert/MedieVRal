@@ -12,17 +12,6 @@
         private bool agarrado;
         private bool soltado = false;
 
-        // Use this for initialization
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -30,6 +19,10 @@
             {
                 interactableAmmo = other.GetComponent<VRTK_InteractableObject>();
                 soltado = false;
+            }
+            else if(other.gameObject.tag == "GunPowder")
+            {
+                pistol.ChargeGunpowder();
             }
         }
 

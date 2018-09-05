@@ -58,17 +58,18 @@ public class GameManager : MonoBehaviour {
                 break;
 
             case 4:
-                if (points > bowPoints)
+                if (points > joustingPoints)
                 {
-                    bowPoints = points;
+                    joustingPoints = points;
                     Debug.Log("exito");
                 }
                 break;
 
+
             case 5:
-                if (points > joustingPoints)
+                if (points > bowPoints)
                 {
-                    joustingPoints = points;
+                    bowPoints = points;
                     Debug.Log("exito");
                 }
                 break;

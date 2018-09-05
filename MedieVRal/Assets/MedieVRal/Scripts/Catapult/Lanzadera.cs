@@ -8,22 +8,19 @@ public class Lanzadera : MonoBehaviour {
 
     public GameObject manivela;
     public GameObject ammo;
-    public Text score;
 
     private bool activated = false;
 
     private float speed = 400f;
+    private float force = 1f;
 
-    private Transform roca;
+    private GameObject rock;
 
     private Vector3 ammoPosition;
     private Quaternion ammoRotation;
 
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+
 
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -36,18 +33,17 @@ public class Lanzadera : MonoBehaviour {
                 this.transform.eulerAngles = new Vector3(this.transform.rotation.eulerAngles.x, this.transform.rotation.eulerAngles.y, 0);
                 activated = false;
                 manivela.transform.eulerAngles = new Vector3(0, 115, 0);
-                roca = this.gameObject.transform.Find("rock");
-                
-                if(roca != null)
-                {
-                    ammoPosition = roca.position;
+                //roca = this.gameObject.transform.Find("rock");
 
-                    Destroy(roca.gameObject);
+                if (rock != null)
+                {
+                    ammoPosition = rock.transform.position;
+                    Destroy(rock.gameObject);
                     GameObject ammunition = Instantiate(ammo, ammoPosition, this.transform.rotation) as GameObject;
-                    ammunition.GetComponent<AmmoBehaviour>().SetScore(score);
+                    ammunition.GetComponent<AmmoBehaviour>().SetForce(force);
                     //ammo.transform.parent = this.transform.parent;
                     //ammo.transform.Translate(ammoPosition);
-                    //ammo.GetComponent<Rigidbody>().AddForce(transform.forward * 1000000000f, ForceMode.VelocityChange);
+
                 }
             }
             
@@ -56,6 +52,15 @@ public class Lanzadera : MonoBehaviour {
 
     public void Activate()
     {
+        Debug.Log(this.gameObject.transform.eulerAngles.z);
+        force = (360f - this.gameObject.transform.eulerAngles.z)/125f;
+        Debug.Log(force);
         activated = true;
+        
+    }
+
+    public void SetRock(GameObject newRock)
+    {
+        rock = newRock;
     }
 }

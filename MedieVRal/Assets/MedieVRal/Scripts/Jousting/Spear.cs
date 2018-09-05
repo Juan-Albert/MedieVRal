@@ -48,7 +48,6 @@
                 if (collision.gameObject.tag == "Diana")
                 {
                     collision.gameObject.GetComponent<Rings>().Hitted();
-                    Debug.Log("Hola");
                 }
                     
             }

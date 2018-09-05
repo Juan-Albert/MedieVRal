@@ -7,21 +7,16 @@ public class AmmoBehaviour : MonoBehaviour {
 
     private Rigidbody myRB;
 
+    private CatapultManager catapultManager;
+
     public GameObject particle;
 
-    public Text score;
 
-
-    void Start () {
-        this.transform.Rotate(0,0,-30);
-        myRB = GetComponent<Rigidbody>();
-        myRB.AddForce(-transform.right * 4500f);
+    private void Start()
+    {
+        catapultManager = GameObject.Find("CatapultManager").GetComponent<CatapultManager>();
+        catapultManager.UseAmmo();
     }
-	
-	
-	void Update () {
-		
-	}
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -29,25 +24,38 @@ public class AmmoBehaviour : MonoBehaviour {
         {
             
             Instantiate(particle, collision.gameObject.transform.position, Quaternion.identity);
-            score.GetComponent<Text>().text = (int.Parse(score.GetComponent<Text>().text) + 1).ToString();
+            catapultManager.IncreasePoints(1);
             Destroy(collision.gameObject.transform.parent.gameObject);
             Destroy(this.gameObject);
 
         }
+        else if (collision.gameObject.tag == "Tower")
+        {
 
-        if (collision.gameObject.tag == "Casa")
+            Instantiate(particle, collision.gameObject.transform.position, Quaternion.identity);
+            catapultManager.IncreasePoints(2);
+            Destroy(collision.gameObject.transform.parent.gameObject);
+            Destroy(this.gameObject);
+
+        }
+        else if (collision.gameObject.tag == "Casa")
         {
            
             Instantiate(particle, collision.gameObject.transform.position, Quaternion.identity);
-            score.GetComponent<Text>().text = (int.Parse(score.GetComponent<Text>().text) + 3).ToString();
+            catapultManager.IncreasePoints(3);
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
 
         }
+        
     }
 
-    public void SetScore(Text newScore)
+
+
+    public void SetForce(float force)
     {
-        score = newScore;
+        this.transform.Rotate(0, 0, -30);
+        myRB = GetComponent<Rigidbody>();
+        myRB.AddForce(-transform.right * 5800f * force);
     }
 }

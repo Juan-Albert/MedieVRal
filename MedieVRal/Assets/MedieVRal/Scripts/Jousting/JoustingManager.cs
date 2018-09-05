@@ -9,18 +9,11 @@ public class JoustingManager : MonoBehaviour {
     public Text scoreUI;
     public GameObject horse;
 
-    private int n_targets = 5;
-    private int targetsDestroyed = 0;
     private int score = 0;
     private bool moving = true;
-    private bool riding = true;
 
     private void Update()
     {
-        if (targetsDestroyed == n_targets)
-        {
-            GameManager.instance.CheckScore(5, score);
-        }
 
         if(horse.transform.position.x > 241f && moving)
         {
@@ -29,6 +22,7 @@ public class JoustingManager : MonoBehaviour {
         else
         {
             moving = false;
+            GameManager.instance.CheckScore(4, score);
         }
     }
 
@@ -39,8 +33,5 @@ public class JoustingManager : MonoBehaviour {
         score++;
     }
 
-    public void Target_Destroyed()
-    {
-        targetsDestroyed++;
-    }
+    
 }

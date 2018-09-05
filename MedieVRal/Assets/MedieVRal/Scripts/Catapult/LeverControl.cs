@@ -9,6 +9,7 @@
         public Lanzadera lanzadera;
 
         private VRTK_Control_UnityEvents controlEvents;
+        private bool recharged = true;
         
 
         private void Start()
@@ -24,9 +25,14 @@
 
         private void HandleChange(object sender, Control3DEventArgs e)
         {
-            if(e.value >= 50)
+            if(e.value >= 50 && recharged)
             {
                 lanzadera.Activate();
+                recharged = false;
+            }
+            else if(e.value == 0)
+            {
+                recharged = true;
             }
             text.text = e.value.ToString() + "(" + e.normalizedValue.ToString() + "%)";
         }

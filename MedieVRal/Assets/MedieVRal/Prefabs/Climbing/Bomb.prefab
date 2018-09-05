@@ -26,9 +26,25 @@ GameObject:
   - component: {fileID: 114433406267334110}
   - component: {fileID: 114305128990122130}
   - component: {fileID: 114999642945281114}
+  - component: {fileID: 114152206898872750}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Bomb
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1566585997962048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4166826110602912}
+  m_Layer: 0
+  m_Name: spark
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,6 +82,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4166826110602912
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1566585997962048}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.013, y: 0.132, z: 0.0031}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4417073309157936}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4218457089797548
 Transform:
   m_ObjectHideFlags: 1
@@ -99,11 +128,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1323915720500764}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 429.4143, y: 16.079, z: 414.01047}
+  m_LocalPosition: {x: 428.548, y: 16.079, z: 414.309}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4310346924262352}
   - {fileID: 4218457089797548}
+  - {fileID: 4166826110602912}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -164,6 +194,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114152206898872750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323915720500764}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ebb7c2be189a724e90ec8813cc22dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkPosition: {fileID: 4166826110602912}
+  particle: {fileID: 1513045212778380, guid: f9c8de24038140f48a58323aae30b260, type: 2}
 --- !u!114 &114305128990122130
 MonoBehaviour:
   m_ObjectHideFlags: 1

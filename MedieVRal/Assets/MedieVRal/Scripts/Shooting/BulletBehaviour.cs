@@ -52,7 +52,7 @@ public class BulletBehaviour : MonoBehaviour
                 Destroy(myRB);
                 transform.position = info.point;
                 //Por último se obtiene el objetivo y se lanza el método de que ha sido alcanzado.
-                info.collider.gameObject.GetComponent<Objectives>().Hitted();
+                info.collider.gameObject.GetComponent<Targets>().Hitted();
             }
 
         }

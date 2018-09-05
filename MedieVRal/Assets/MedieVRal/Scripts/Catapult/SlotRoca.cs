@@ -9,19 +9,9 @@
 
         private VRTK_InteractableObject interactableRock;
         private bool agarrado;
-        private bool soltado = false; 
+        private bool soltado = false;
 
-        // Use this for initialization
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        public Lanzadera lanzadera;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -50,6 +40,7 @@
                         Destroy(other.gameObject.GetComponent<Rigidbody>());
                         other.gameObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
                         soltado = true;
+                        lanzadera.SetRock(other.gameObject);
                     }
                 }
             }
@@ -62,6 +53,7 @@
             {
                 agarrado = false;
                 soltado = false;
+                lanzadera.SetRock(null);
             }
                 
         }

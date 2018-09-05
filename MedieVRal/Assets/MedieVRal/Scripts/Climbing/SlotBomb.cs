@@ -10,8 +10,13 @@
         private VRTK_InteractableObject interactableBomb;
         private bool agarrado;
         private bool soltado = false;
+        private bool colocado = false;
+        private GameObject bomb;
 
         public GameObject mesh;
+        public GameObject particle;
+
+        public ClimbingManager climbingManager;
 
 
         private void OnTriggerEnter(Collider other)
@@ -36,12 +41,17 @@
 
                     if (!interactableBomb.IsGrabbed() && agarrado)
                     {
+                        bomb = other.gameObject;
                         agarrado = false;
-                        other.gameObject.transform.parent = this.gameObject.transform.parent;
-                        Destroy(other.gameObject.GetComponent<Rigidbody>());
-                        other.gameObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+                        bomb.transform.parent = this.gameObject.transform.parent;
+                        Destroy(bomb.GetComponent<Rigidbody>());
+                        bomb.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+                        bomb.GetComponent<VRTK_InteractableObject>().enabled = false;
+                        bomb.GetComponent<Bomb>().enabled = true;
+                        climbingManager.IncreasePoints();
                         mesh.SetActive(false);
                         soltado = true;
+                        colocado = true;
                     }
                 }
             }
@@ -55,8 +65,20 @@
                 mesh.SetActive(true);
                 agarrado = false;
                 soltado = false;
+                colocado = false;
             }
 
+        }
+
+        public bool IsPlaced()
+        {
+            return colocado;
+        }
+
+        public void Detonate()
+        {
+            Instantiate(particle, this.transform.position, Quaternion.identity);
+            Destroy(bomb);
         }
     }
 }
