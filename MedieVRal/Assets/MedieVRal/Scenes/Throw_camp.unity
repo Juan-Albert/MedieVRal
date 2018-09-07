@@ -796,6 +796,11 @@ Prefab:
       propertyPath: move_Translation
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114997773064099200, guid: 468bb5e0700f7df47a90519b7b7642b6,
+        type: 2}
+      propertyPath: hit
+      value: 
+      objectReference: {fileID: 8300000, guid: cb8e56a2b8d2be94b8756de018455814, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 468bb5e0700f7df47a90519b7b7642b6, type: 2}
   m_IsPrefabParent: 0
@@ -1333,6 +1338,11 @@ Prefab:
       propertyPath: m_Name
       value: Target_Pivot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114997773064099200, guid: 468bb5e0700f7df47a90519b7b7642b6,
+        type: 2}
+      propertyPath: hit
+      value: 
+      objectReference: {fileID: 8300000, guid: cb8e56a2b8d2be94b8756de018455814, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 468bb5e0700f7df47a90519b7b7642b6, type: 2}
   m_IsPrefabParent: 0
@@ -2382,6 +2392,11 @@ Prefab:
       propertyPath: movement
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114997773064099200, guid: 468bb5e0700f7df47a90519b7b7642b6,
+        type: 2}
+      propertyPath: hit
+      value: 
+      objectReference: {fileID: 8300000, guid: cb8e56a2b8d2be94b8756de018455814, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 468bb5e0700f7df47a90519b7b7642b6, type: 2}
   m_IsPrefabParent: 0
@@ -7700,6 +7715,7 @@ MonoBehaviour:
   - {fileID: 1134911831}
   - {fileID: 1308608584}
   - {fileID: 228386513}
+  endLevel: {fileID: 8300000, guid: 9a5392ed8517a9241bcc06a58624bfe4, type: 3}
 --- !u!1001 &767134001
 Prefab:
   m_ObjectHideFlags: 0
@@ -8763,6 +8779,11 @@ Prefab:
       propertyPath: speed_Translation
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114997773064099200, guid: 468bb5e0700f7df47a90519b7b7642b6,
+        type: 2}
+      propertyPath: hit
+      value: 
+      objectReference: {fileID: 8300000, guid: cb8e56a2b8d2be94b8756de018455814, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 468bb5e0700f7df47a90519b7b7642b6, type: 2}
   m_IsPrefabParent: 0
@@ -9528,6 +9549,11 @@ Prefab:
       propertyPath: speed_Translation
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114997773064099200, guid: 468bb5e0700f7df47a90519b7b7642b6,
+        type: 2}
+      propertyPath: hit
+      value: 
+      objectReference: {fileID: 8300000, guid: cb8e56a2b8d2be94b8756de018455814, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 468bb5e0700f7df47a90519b7b7642b6, type: 2}
   m_IsPrefabParent: 0
@@ -11545,13 +11571,18 @@ Prefab:
     - target: {fileID: 114997773064099200, guid: 468bb5e0700f7df47a90519b7b7642b6,
         type: 2}
       propertyPath: speed_Translation
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114997773064099200, guid: 468bb5e0700f7df47a90519b7b7642b6,
         type: 2}
       propertyPath: move_Translation
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114997773064099200, guid: 468bb5e0700f7df47a90519b7b7642b6,
+        type: 2}
+      propertyPath: hit
+      value: 
+      objectReference: {fileID: 8300000, guid: cb8e56a2b8d2be94b8756de018455814, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 468bb5e0700f7df47a90519b7b7642b6, type: 2}
   m_IsPrefabParent: 0
@@ -15996,6 +16027,11 @@ Prefab:
       propertyPath: speed_Translation
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114997773064099200, guid: 468bb5e0700f7df47a90519b7b7642b6,
+        type: 2}
+      propertyPath: hit
+      value: 
+      objectReference: {fileID: 8300000, guid: cb8e56a2b8d2be94b8756de018455814, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 468bb5e0700f7df47a90519b7b7642b6, type: 2}
   m_IsPrefabParent: 0
@@ -18914,6 +18950,11 @@ Prefab:
       propertyPath: m_Name
       value: Target_Pivot (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 114997773064099200, guid: 468bb5e0700f7df47a90519b7b7642b6,
+        type: 2}
+      propertyPath: hit
+      value: 
+      objectReference: {fileID: 8300000, guid: cb8e56a2b8d2be94b8756de018455814, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 468bb5e0700f7df47a90519b7b7642b6, type: 2}
   m_IsPrefabParent: 0
@@ -21857,6 +21898,11 @@ Prefab:
       propertyPath: m_Name
       value: Target_Pivot (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 114997773064099200, guid: 468bb5e0700f7df47a90519b7b7642b6,
+        type: 2}
+      propertyPath: hit
+      value: 
+      objectReference: {fileID: 8300000, guid: cb8e56a2b8d2be94b8756de018455814, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 468bb5e0700f7df47a90519b7b7642b6, type: 2}
   m_IsPrefabParent: 0
@@ -22124,7 +22170,6 @@ GameObject:
   - component: {fileID: 2137501500}
   - component: {fileID: 2137501505}
   - component: {fileID: 2137501507}
-  - component: {fileID: 2137501506}
   m_Layer: 0
   m_Name: LeftController
   m_TagString: Untagged
@@ -22309,31 +22354,6 @@ MonoBehaviour:
   canClickOnHover: 0
   autoActivatingCanvas: {fileID: 0}
   collisionClick: 0
---- !u!114 &2137501506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2137501498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71b26f999cbdac8478b6c2a046256169, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activationButton: 10
-  activationMode: 0
-  selectionButton: 3
-  clickMethod: 0
-  attemptClickOnDeactivate: 0
-  clickAfterHoverDuration: 0
-  controller: {fileID: 0}
-  pointerOriginTransform: {fileID: 0}
-  hoveringElement: {fileID: 0}
-  controllerRenderModel: {fileID: 0}
-  hoverDurationTimer: 0
-  canClickOnHover: 0
-  autoActivatingCanvas: {fileID: 0}
-  collisionClick: 0
 --- !u!114 &2137501507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22485,6 +22505,11 @@ Prefab:
       propertyPath: speed_Translation
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114997773064099200, guid: 468bb5e0700f7df47a90519b7b7642b6,
+        type: 2}
+      propertyPath: hit
+      value: 
+      objectReference: {fileID: 8300000, guid: cb8e56a2b8d2be94b8756de018455814, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 468bb5e0700f7df47a90519b7b7642b6, type: 2}
   m_IsPrefabParent: 0

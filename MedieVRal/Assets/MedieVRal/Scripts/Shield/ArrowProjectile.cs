@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ArrowProjectile : MonoBehaviour {
 
+    public AudioClip shieldImpact;
+    public AudioClip playerImpact;
+
     private Rigidbody rb;
 
     private float t = 0.0f;
@@ -62,12 +65,14 @@ public class ArrowProjectile : MonoBehaviour {
 
                 if (info.collider.gameObject.tag == "MainCamera")
                 {
+                    SoundManager.instance.PlaySingle(playerImpact);
                     Debug.DrawRay(lastPos, direction, Color.blue, 10f);
                     shieldManager.DecreasePoints();                  
                     Destroy(this.gameObject);
                 }
                 else if (info.collider.gameObject.tag == "Shield")
                 {
+                    SoundManager.instance.PlaySingle(shieldImpact);
                     Debug.DrawRay(lastPos, direction, Color.yellow, 10f);
                     hit = true;
                     transform.parent = info.collider.gameObject.transform.parent;

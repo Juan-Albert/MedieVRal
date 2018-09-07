@@ -292,6 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxArrowLife: 10
+  hit: {fileID: 8300000, guid: 133c0b29979d3cc4bb624863a00297dd, type: 3}
   inFlight: 0
 --- !u!114 &114457339680943850
 MonoBehaviour:

@@ -8,6 +8,9 @@
 
         public GameObject bullet;
 
+        public AudioClip fire;
+        public AudioClip powder;
+
         private Transform slot;
 
         private bool load = false;
@@ -28,6 +31,7 @@
         {
             if(load)
             {
+                SoundManager.instance.PlaySingle(fire);
                 Instantiate(bullet, slot.transform.position, slot.transform.rotation);
                 gunPowder = false;
                 load = false;
@@ -52,6 +56,7 @@
 
         public void ChargeGunpowder()
         {
+            SoundManager.instance.PlaySingle(powder);
             gunPowder = true;
         }
     }

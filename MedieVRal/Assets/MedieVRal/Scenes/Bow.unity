@@ -641,6 +641,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114041692519169818, guid: 0411ed2ac60aee04c874a38a9d84d2b0,
+        type: 2}
+      propertyPath: release
+      value: 
+      objectReference: {fileID: 8300000, guid: d0939f18c93159b42b5a61a790ab86b4, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0411ed2ac60aee04c874a38a9d84d2b0, type: 2}
   m_IsPrefabParent: 0
@@ -14515,6 +14520,7 @@ MonoBehaviour:
   - {fileID: 1447932722}
   - {fileID: 2122732335}
   - {fileID: 1051253504}
+  endLevel: {fileID: 8300000, guid: 9a5392ed8517a9241bcc06a58624bfe4, type: 3}
 --- !u!4 &1421276913
 Transform:
   m_ObjectHideFlags: 0

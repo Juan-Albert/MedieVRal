@@ -4,6 +4,8 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     public float maxArrowLife = 10f;
+
+    public AudioClip hit;
     [HideInInspector]
     public bool inFlight = false;
 
@@ -80,7 +82,7 @@ public class Arrow : MonoBehaviour
             ResetArrow();
             if (collision.gameObject.tag == "Diana")
             {
-                
+                SoundManager.instance.PlaySingle(hit);
                 arrowHolder.transform.SetParent(collision.gameObject.transform.parent);
                 Destroy(GetComponent<Rigidbody>());
                 Destroy(transform.parent.GetComponent<Rigidbody>());

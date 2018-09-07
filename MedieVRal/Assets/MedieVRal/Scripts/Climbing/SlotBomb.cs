@@ -15,6 +15,7 @@
 
         public GameObject mesh;
         public GameObject particle;
+        public AudioClip explosion;
 
         public ClimbingManager climbingManager;
 
@@ -77,6 +78,7 @@
 
         public void Detonate()
         {
+            SoundManager.instance.PlaySingle(explosion);
             Instantiate(particle, this.transform.position, Quaternion.identity);
             Destroy(bomb);
         }

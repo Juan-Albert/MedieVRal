@@ -7,6 +7,7 @@
     {
         public TextMesh text;
         public Lanzadera lanzadera;
+        public AudioClip lanzar;
 
         private VRTK_Control_UnityEvents controlEvents;
         private bool recharged = true;
@@ -28,6 +29,7 @@
             if(e.value >= 50 && recharged)
             {
                 lanzadera.Activate();
+                SoundManager.instance.PlaySingle(lanzar);
                 recharged = false;
             }
             else if(e.value == 0)

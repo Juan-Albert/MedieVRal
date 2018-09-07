@@ -12,6 +12,8 @@
         public float bowVibration = 0.062f;
         public float stringVibration = 0.087f;
 
+        public AudioClip release;
+
         private BowAnimation bowAnimation;
         private GameObject currentArrow;
         private BowHandle handle;
@@ -141,6 +143,7 @@
         {
             if (stringControl)
             {
+                SoundManager.instance.PlaySingle(release);
                 stringControl.ForceRelease();
             }
         }

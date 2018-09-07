@@ -11,40 +11,40 @@ public class AmmoBehaviour : MonoBehaviour {
 
     public GameObject particle;
 
+    public AudioClip impact;
+
 
     private void Start()
     {
         catapultManager = GameObject.Find("CatapultManager").GetComponent<CatapultManager>();
-        catapultManager.UseAmmo();
+        StartCoroutine(AutoDestruccion());
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("holi");
         if (collision.gameObject.tag == "Muro")
         {
-            
+            SoundManager.instance.PlaySingle(impact);
             Instantiate(particle, collision.gameObject.transform.position, Quaternion.identity);
             catapultManager.IncreasePoints(1);
             Destroy(collision.gameObject.transform.parent.gameObject);
-            Destroy(this.gameObject);
 
         }
         else if (collision.gameObject.tag == "Tower")
         {
-
+            SoundManager.instance.PlaySingle(impact);
             Instantiate(particle, collision.gameObject.transform.position, Quaternion.identity);
             catapultManager.IncreasePoints(2);
             Destroy(collision.gameObject.transform.parent.gameObject);
-            Destroy(this.gameObject);
 
         }
         else if (collision.gameObject.tag == "Casa")
         {
-           
+            SoundManager.instance.PlaySingle(impact);
             Instantiate(particle, collision.gameObject.transform.position, Quaternion.identity);
             catapultManager.IncreasePoints(3);
             Destroy(collision.gameObject);
-            Destroy(this.gameObject);
 
         }
         
@@ -57,5 +57,12 @@ public class AmmoBehaviour : MonoBehaviour {
         this.transform.Rotate(0, 0, -30);
         myRB = GetComponent<Rigidbody>();
         myRB.AddForce(-transform.right * 5800f * force);
+    }
+
+    IEnumerator AutoDestruccion()
+    {
+        yield return new WaitForSeconds(10);
+        catapultManager.UseAmmo();
+        Destroy(this.gameObject);
     }
 }

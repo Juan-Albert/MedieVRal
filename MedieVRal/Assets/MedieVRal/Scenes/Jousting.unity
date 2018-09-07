@@ -13416,6 +13416,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreUI: {fileID: 1622684014}
   horse: {fileID: 150553420}
+  gallop: {fileID: 8300000, guid: b774472f2e9e21d4883e21ba9c39ab11, type: 3}
+  endLevel: {fileID: 8300000, guid: 9a5392ed8517a9241bcc06a58624bfe4, type: 3}
 --- !u!4 &802621377
 Transform:
   m_ObjectHideFlags: 0

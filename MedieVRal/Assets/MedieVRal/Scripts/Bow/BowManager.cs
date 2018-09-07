@@ -8,9 +8,10 @@ public class BowManager : MonoBehaviour {
     [Tooltip("Objeto donde se va a almacenar la puntuación del jugador.")]
     public Text scoreUI;
     [Tooltip("Tiempo que tarda en aparecer el objeto.")]
-    public float spawn_time = 3f;
+    public float spawn_time = 7f;
     [Tooltip("Objetivos disponibles.")]
     public List<GameObject> objectives;
+    public AudioClip endLevel;
 
     private int n_targets;
     private int targetsDestroyed = 0;
@@ -28,6 +29,7 @@ public class BowManager : MonoBehaviour {
     {
         if (targetsDestroyed == n_targets && !scored)
         {
+            SoundManager.instance.PlaySingle(endLevel);
             GameManager.instance.CheckScore(5, score);
             scored = true;
         }

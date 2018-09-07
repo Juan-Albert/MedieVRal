@@ -10,6 +10,8 @@ public class ShieldManager : MonoBehaviour {
     public Transform[] arrowSpawns;
     public GameObject arrow;
     public GameObject particle;
+    public AudioClip arrowHorn;
+    public AudioClip endLevel;
 
     private int score = 10;
 
@@ -44,6 +46,7 @@ public class ShieldManager : MonoBehaviour {
     {
         while(!end)
         {
+            SoundManager.instance.PlaySingle(arrowHorn);
             Transform spawn = GetRandomInArray(arrowSpawns);
             GameObject warning = Instantiate(particle, spawn.transform.position, spawn.transform.rotation) as GameObject;
             yield return new WaitForSeconds(5);         
@@ -56,8 +59,9 @@ public class ShieldManager : MonoBehaviour {
 
     IEnumerator GameTime()
     {
-        yield return new WaitForSeconds(34);
+        yield return new WaitForSeconds(80);
         end = true;
+        SoundManager.instance.PlaySingle(endLevel);
         GameManager.instance.CheckScore(7, score);
     }
 }

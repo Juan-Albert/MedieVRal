@@ -12,6 +12,7 @@ public class ClimbingManager : MonoBehaviour {
     public GameObject explosion;
     [Tooltip("Posición de las bombas.")]
     public GameObject[] bombSlots;
+    public AudioClip endLevel;
 
     private int n_targets;
     private int placed = 0;
@@ -50,9 +51,10 @@ public class ClimbingManager : MonoBehaviour {
 
     IEnumerator GameTime()
     {
-        yield return new WaitForSeconds(360);
-        
+        yield return new WaitForSeconds(240);
+        SoundManager.instance.PlaySingle(endLevel);
         GameManager.instance.CheckScore(6, score);
+        yield return new WaitForSeconds(3);
         if (placed == n_targets)
         {
             foreach (GameObject slot in bombSlots)

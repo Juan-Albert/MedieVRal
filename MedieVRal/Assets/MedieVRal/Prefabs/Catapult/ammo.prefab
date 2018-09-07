@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 1586910636378068, guid: 0eff590f628a37149a2ad4a1164953ad, type: 2}
-  score: {fileID: 114936311672072454, guid: 24dca317c1d5ca24ca34f3b8c9fc747e, type: 2}
+  impact: {fileID: 8300000, guid: 8b992549548750e479a39fe3868681a0, type: 3}
 --- !u!135 &135259951410243612
 SphereCollider:
   m_ObjectHideFlags: 1

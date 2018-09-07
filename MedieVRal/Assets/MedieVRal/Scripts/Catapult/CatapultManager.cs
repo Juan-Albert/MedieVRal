@@ -7,6 +7,7 @@ public class CatapultManager : MonoBehaviour {
 
     [Tooltip("Objeto donde se va a almacenar la puntuación del jugador.")]
     public Text scoreUI;
+    public AudioClip endLevel;
 
     private int ammo = 8;
     private int ammoUsed = 0;
@@ -19,6 +20,7 @@ public class CatapultManager : MonoBehaviour {
     {
         if (ammoUsed == ammo && !scored)
         {
+            SoundManager.instance.PlaySingle(endLevel);
             GameManager.instance.CheckScore(2, score);
             scored = true;
         }

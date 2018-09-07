@@ -537,7 +537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &36935703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,6 +562,7 @@ MonoBehaviour:
   - {fileID: 1650545800}
   - {fileID: 273519336}
   - {fileID: 237029921}
+  endLevel: {fileID: 8300000, guid: 9a5392ed8517a9241bcc06a58624bfe4, type: 3}
 --- !u!4 &36935704
 Transform:
   m_ObjectHideFlags: 0
@@ -3129,7 +3130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &237029922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3147,6 +3148,7 @@ MonoBehaviour:
   movement: 4
   pivot: {fileID: 589241839}
   shootingManager: {fileID: 36935703}
+  hit: {fileID: 8300000, guid: 53b5d733fcf4d6b45840f03320923575, type: 3}
 --- !u!65 &237029923
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3466,7 +3468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &273519337
 Transform:
   m_ObjectHideFlags: 0
@@ -3499,6 +3501,7 @@ MonoBehaviour:
   movement: 4
   pivot: {fileID: 870773156}
   shootingManager: {fileID: 36935703}
+  hit: {fileID: 8300000, guid: 53b5d733fcf4d6b45840f03320923575, type: 3}
 --- !u!65 &273519339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5102,7 +5105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &387332159
 Transform:
   m_ObjectHideFlags: 0
@@ -5135,6 +5138,7 @@ MonoBehaviour:
   movement: 1
   pivot: {fileID: 1325942593}
   shootingManager: {fileID: 36935703}
+  hit: {fileID: 8300000, guid: 53b5d733fcf4d6b45840f03320923575, type: 3}
 --- !u!65 &387332161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7658,7 +7662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &582797752
 Transform:
   m_ObjectHideFlags: 0
@@ -7691,6 +7695,7 @@ MonoBehaviour:
   movement: 0
   pivot: {fileID: 662277292}
   shootingManager: {fileID: 36935703}
+  hit: {fileID: 8300000, guid: 53b5d733fcf4d6b45840f03320923575, type: 3}
 --- !u!65 &582797754
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9056,7 +9061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &694013152
 Transform:
   m_ObjectHideFlags: 0
@@ -9102,6 +9107,7 @@ MonoBehaviour:
   movement: 2
   pivot: {fileID: 1843943731}
   shootingManager: {fileID: 36935703}
+  hit: {fileID: 8300000, guid: 53b5d733fcf4d6b45840f03320923575, type: 3}
 --- !u!1001 &699268257
 Prefab:
   m_ObjectHideFlags: 0
@@ -15830,7 +15836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1338667605
 Transform:
   m_ObjectHideFlags: 0
@@ -15876,6 +15882,7 @@ MonoBehaviour:
   movement: 2
   pivot: {fileID: 311704608}
   shootingManager: {fileID: 36935703}
+  hit: {fileID: 8300000, guid: 53b5d733fcf4d6b45840f03320923575, type: 3}
 --- !u!1 &1343723716
 GameObject:
   m_ObjectHideFlags: 0
@@ -16043,7 +16050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1361758433
 Transform:
   m_ObjectHideFlags: 0
@@ -16076,6 +16083,7 @@ MonoBehaviour:
   movement: 2
   pivot: {fileID: 1995904568}
   shootingManager: {fileID: 36935703}
+  hit: {fileID: 8300000, guid: 53b5d733fcf4d6b45840f03320923575, type: 3}
 --- !u!65 &1361758435
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18405,6 +18413,16 @@ Prefab:
       propertyPath: holdButtonToGrab
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114053668770464870, guid: 82025ff9b3d125d4bb30293dbd473a80,
+        type: 2}
+      propertyPath: fire
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f97cbeedecdc3e4faf8e640913d315d, type: 3}
+    - target: {fileID: 114053668770464870, guid: 82025ff9b3d125d4bb30293dbd473a80,
+        type: 2}
+      propertyPath: powder
+      value: 
+      objectReference: {fileID: 8300000, guid: 644dff84f708c614bb913be184476100, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82025ff9b3d125d4bb30293dbd473a80, type: 2}
   m_IsPrefabParent: 0
@@ -19765,7 +19783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1650545801
 Transform:
   m_ObjectHideFlags: 0
@@ -19798,6 +19816,7 @@ MonoBehaviour:
   movement: 4
   pivot: {fileID: 977863412}
   shootingManager: {fileID: 36935703}
+  hit: {fileID: 8300000, guid: 53b5d733fcf4d6b45840f03320923575, type: 3}
 --- !u!65 &1650545803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24097,7 +24116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2010005979
 Transform:
   m_ObjectHideFlags: 0
@@ -24130,6 +24149,7 @@ MonoBehaviour:
   movement: 0
   pivot: {fileID: 1795868070}
   shootingManager: {fileID: 36935703}
+  hit: {fileID: 8300000, guid: 53b5d733fcf4d6b45840f03320923575, type: 3}
 --- !u!65 &2010005981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25186,7 +25206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2116314343
 Transform:
   m_ObjectHideFlags: 0
@@ -25232,6 +25252,7 @@ MonoBehaviour:
   movement: 2
   pivot: {fileID: 579795205}
   shootingManager: {fileID: 36935703}
+  hit: {fileID: 8300000, guid: 53b5d733fcf4d6b45840f03320923575, type: 3}
 --- !u!1001 &2118369183
 Prefab:
   m_ObjectHideFlags: 0

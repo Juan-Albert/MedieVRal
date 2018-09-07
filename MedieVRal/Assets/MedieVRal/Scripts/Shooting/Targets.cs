@@ -16,6 +16,7 @@ public class Targets : MonoBehaviour {
     [Tooltip("Punto de Rotación de la diana.")]
     public Transform pivot;
     public ShootingManager shootingManager;
+    public AudioClip hit;
 
     //Posición inicial de la diana.
     private Vector3 initial_pos;
@@ -189,6 +190,7 @@ public class Targets : MonoBehaviour {
         hitted = true;
         if (puntuar)
         {
+            SoundManager.instance.PlaySingle(hit);
             Debug.Log("Hitted");
             shootingManager.IncreasePoints();
             puntuar = false;
@@ -200,7 +202,7 @@ public class Targets : MonoBehaviour {
 
     IEnumerator AutoDestruccion()
     {        
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(30);
         Debug.Log("Destuida");
         shootingManager.Target_Destroyed();
         Destroy(pivot.gameObject);

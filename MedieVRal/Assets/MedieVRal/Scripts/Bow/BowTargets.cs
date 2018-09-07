@@ -193,7 +193,7 @@ public class BowTargets : MonoBehaviour {
 
     IEnumerator AutoDestruccion()
     {
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(40);
         Debug.Log("Destuida");
         bowManager.Target_Destroyed();
         Destroy(pivot.gameObject);

@@ -8,11 +8,18 @@ public class JoustingManager : MonoBehaviour {
     [Tooltip("Objeto donde se va a almacenar la puntuación del jugador.")]
     public Text scoreUI;
     public GameObject horse;
+    public AudioClip gallop;
+    public AudioClip endLevel;
 
     private int score = 0;
     private bool moving = true;
 
     private bool scored = false;
+
+    private void Start()
+    {
+        SoundManager.instance.PlaySingle(gallop);
+    }
 
     private void Update()
     {
@@ -28,6 +35,7 @@ public class JoustingManager : MonoBehaviour {
 
         if(!moving && !scored)
         {
+            SoundManager.instance.PlaySingle(endLevel);
             GameManager.instance.CheckScore(4, score);
             scored = true;
         }

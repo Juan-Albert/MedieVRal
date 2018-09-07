@@ -140,6 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f00d169f3639c46b08a4bab142b64f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shieldImpact: {fileID: 8300000, guid: 3f325e7c7dd20f44a9ee7a50c7360d7f, type: 3}
+  playerImpact: {fileID: 8300000, guid: 4b0f91a1f481ca04180213e3f2a4ec70, type: 3}
 --- !u!136 &136497733463491974
 CapsuleCollider:
   m_ObjectHideFlags: 1
