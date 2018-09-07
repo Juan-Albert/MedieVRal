@@ -47,15 +47,7 @@ public class BowTargets : MonoBehaviour {
         {
             case Movement.none:
 
-                if (hitted)
-                {
-                    pivot.Rotate(0, 0, -speed_Rotation * Time.deltaTime);
-
-                    if (pivot.rotation.eulerAngles.z <= 270 && pivot.rotation.eulerAngles.z >= 10)
-                    {
-                        pivot.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 270);
-                    }
-                }
+                
 
                 break;
 
@@ -201,7 +193,7 @@ public class BowTargets : MonoBehaviour {
 
     IEnumerator AutoDestruccion()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(30);
         Debug.Log("Destuida");
         bowManager.Target_Destroyed();
         Destroy(pivot.gameObject);

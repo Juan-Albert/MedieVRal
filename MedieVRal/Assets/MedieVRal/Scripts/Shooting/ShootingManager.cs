@@ -8,13 +8,15 @@ public class ShootingManager : MonoBehaviour {
     [Tooltip("Objeto donde se va a almacenar la puntuación del jugador.")]
     public Text scoreUI;
     [Tooltip("Tiempo que tarda en aparecer el objeto.")]
-    public float spawn_time = 4f;
+    public float spawn_time = 6f;
     [Tooltip("Objetivos disponibles.")]
     public List<GameObject> targets;
 
     private int n_targets;
     private int targetsDestroyed = 0;
     private int score = 0;
+
+    private bool scored = false;
 
     private void Start()
     {
@@ -24,9 +26,10 @@ public class ShootingManager : MonoBehaviour {
 
     private void Update()
     {
-        if (targetsDestroyed == n_targets)
+        if (targetsDestroyed == n_targets && !scored)
         {
             GameManager.instance.CheckScore(3, score);
+            scored = true;
         }
     }
 

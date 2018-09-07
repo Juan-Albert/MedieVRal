@@ -111,8 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6dfa9c49a345494daf8d728d76a972d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particle: {fileID: 0}
-  score: {fileID: 0}
+  bulletHole: {fileID: 1296483587890740, guid: 441e606dddfe7b249ace422f2bad3a47, type: 2}
 --- !u!135 &135978506545088672
 SphereCollider:
   m_ObjectHideFlags: 1

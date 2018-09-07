@@ -144,27 +144,27 @@ public class Objectives : MonoBehaviour {
 
 				if (!hitted) 
 				{
-					if (pivot.position.z < initial_pos.z + move_Translation && direction) 
-					{
-						pivot.Translate (0, 0, speed_Translation * Time.deltaTime);
+                    if (pivot.position.z < initial_pos.z + move_Translation && direction)
+                    {
+                        pivot.Translate(0, 0, speed_Translation * Time.deltaTime);
 
 
-					} 
-					else 
-					{
-						direction = false;
-					}
+                    }
+                    else
+                    {
+                        direction = false;
+                    }
 
-					if (pivot.position.z > initial_pos.z - move_Translation && !direction) 
-					{
-						pivot.Translate (0, 0, -speed_Translation * Time.deltaTime);
+                    if (pivot.position.z > initial_pos.z - move_Translation && !direction)
+                    {
+                        pivot.Translate(0, 0, -speed_Translation * Time.deltaTime);
 
-					} 
-					else 
-					{
-						direction = true;
-					}
-				} 
+                    }
+                    else
+                    {
+                        direction = true;
+                    }
+                } 
 				else 
 				{
 
@@ -179,6 +179,12 @@ public class Objectives : MonoBehaviour {
 
 			    
 			    break;
+
+            case Movement.square:
+
+                
+
+                break;
 			
 		}
 
@@ -201,7 +207,7 @@ public class Objectives : MonoBehaviour {
 
     IEnumerator AutoDestruccion()
     {        
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(15);
         Debug.Log("Destuida");
         throwManager.Target_Destroyed();
         Destroy(pivot.gameObject);

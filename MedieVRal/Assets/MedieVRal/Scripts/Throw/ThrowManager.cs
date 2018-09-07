@@ -16,6 +16,8 @@ public class ThrowManager : MonoBehaviour {
     private int targetsDestroyed = 0;
     private int score = 0;
 
+    private bool scored = false;
+
     private void Start()
     {
         n_targets = objectives.Count;
@@ -24,9 +26,10 @@ public class ThrowManager : MonoBehaviour {
 
     private void Update()
     {
-        if(targetsDestroyed == n_targets)
+        if(targetsDestroyed == n_targets && !scored)
         {
             GameManager.instance.CheckScore(1, score);
+            scored = true;
         }
     }
 

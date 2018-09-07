@@ -200,7 +200,7 @@ public class Targets : MonoBehaviour {
 
     IEnumerator AutoDestruccion()
     {        
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(20);
         Debug.Log("Destuida");
         shootingManager.Target_Destroyed();
         Destroy(pivot.gameObject);

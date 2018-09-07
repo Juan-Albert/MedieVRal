@@ -12,12 +12,15 @@ public class CatapultManager : MonoBehaviour {
     private int ammoUsed = 0;
     private int score = 0;
 
+    private bool scored = false;
+
 
     private void Update()
     {
-        if (ammoUsed == ammo)
+        if (ammoUsed == ammo && !scored)
         {
             GameManager.instance.CheckScore(2, score);
+            scored = true;
         }
     }
 

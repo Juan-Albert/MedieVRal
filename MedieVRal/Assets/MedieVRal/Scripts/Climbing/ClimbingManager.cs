@@ -8,6 +8,8 @@ public class ClimbingManager : MonoBehaviour {
 
     [Tooltip("Objeto donde se va a almacenar la puntuación del jugador.")]
     public Text scoreUI;
+    [Tooltip("Textura de explosión.")]
+    public GameObject explosion;
     [Tooltip("Posición de las bombas.")]
     public GameObject[] bombSlots;
 
@@ -48,7 +50,7 @@ public class ClimbingManager : MonoBehaviour {
 
     IEnumerator GameTime()
     {
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(360);
         
         GameManager.instance.CheckScore(6, score);
         if (placed == n_targets)
@@ -66,6 +68,7 @@ public class ClimbingManager : MonoBehaviour {
                 if (slot.GetComponent<SlotBomb>().IsPlaced())
                 {
                     slot.GetComponent<SlotBomb>().Detonate();
+                    Instantiate(explosion, slot.transform.position, slot.transform.rotation);
                 }
             }
         }

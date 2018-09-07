@@ -12,17 +12,24 @@ public class JoustingManager : MonoBehaviour {
     private int score = 0;
     private bool moving = true;
 
+    private bool scored = false;
+
     private void Update()
     {
 
         if(horse.transform.position.x > 241f && moving)
         {
-            horse.transform.Translate(0,0, 5f * Time.deltaTime);
+            horse.transform.Translate(0,0, 7.5f * Time.deltaTime);
         }
         else
         {
             moving = false;
+        }
+
+        if(!moving && !scored)
+        {
             GameManager.instance.CheckScore(4, score);
+            scored = true;
         }
     }
 

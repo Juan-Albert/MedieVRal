@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BulletBehaviour : MonoBehaviour
 {
+    public GameObject bulletHole;
+
     //Distancia entre una posición y la anterior para detectar colision.
     private float maxDistance;
 
@@ -20,6 +22,7 @@ public class BulletBehaviour : MonoBehaviour
     //Objeto que almacena la información de la colisión
     private RaycastHit info;
 
+    private bool hitted = false;
 
     void Start()
     {
@@ -43,16 +46,19 @@ public class BulletBehaviour : MonoBehaviour
         {
             //Debug.DrawRay(lastPos, direction, Color.red, 10f);
             //Se comprueba si se ha colisionado con una diana.
-            if (info.collider.gameObject.tag == "Diana")
+            if (info.collider.gameObject.tag == "Diana" && !hitted)
             {
                 //Debug.DrawRay(lastPos, direction, Color.blue, 10f);
                 //Para que el objeto lanzable se quede 'clavado' en el objetivo lo asignamos como su hijo y le quitamos el
                 //componente RigitBody para que no tenga gravedad y caiga al suelo.
+                GameObject impact = Instantiate(bulletHole, info.point + new Vector3(-0.007f,0f,0f), info.collider.gameObject.transform.rotation) as GameObject;
+                impact.transform.parent = info.collider.gameObject.transform.parent;
                 transform.parent = info.collider.gameObject.transform.parent;
                 Destroy(myRB);
                 transform.position = info.point;
                 //Por último se obtiene el objetivo y se lanza el método de que ha sido alcanzado.
                 info.collider.gameObject.GetComponent<Targets>().Hitted();
+                hitted = true;
             }
 
         }
